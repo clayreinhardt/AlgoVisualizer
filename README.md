@@ -18,6 +18,7 @@
 - `spacebar` - Start algorithm
 - `right mouse click` - erase
 - `X` - top left, close game
+- `C` - clear whole board
 
 
 ##  -  *Have Fun!*

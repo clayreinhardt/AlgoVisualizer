@@ -199,15 +199,15 @@ def main(win, width):
     end = None
     
     run = True
-    started = False
+    # started = False
     while run:
         draw(win, grid, ROWS, width)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
             
-            if started:
-                continue
+            # if started:
+            #     continue
             
             if pygame.mouse.get_pressed()[0]: # LEFT
                 pos = pygame.mouse.get_pos()
@@ -236,7 +236,7 @@ def main(win, width):
                     end = None
                 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE and not started:
+                if event.key == pygame.K_SPACE and start and end:
                     # algo :)
                     # update neighbors of spots
                     for row in grid:
