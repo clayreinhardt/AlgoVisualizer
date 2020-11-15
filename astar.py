@@ -94,6 +94,15 @@ def h(p1, p2):
     x2, y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
 
+# current node starts at end node, 
+def reconstruct_path(came_from, current, draw):
+    while current in came_from:
+        current = came_from[current]
+        current.make_path()
+        draw()
+        # once hit start node, stop reconstructing
+
+
 
 def algorithm(draw, grid, start, end):
     count = 0
@@ -116,6 +125,8 @@ def algorithm(draw, grid, start, end):
         open_set_hash.remove(current)
         
         if current == end: # if path found return
+            reconstruct_path(came_from, end, draw)
+            end.make_end() # prevent draw from covering end node
             return True
         
         for neighbor in current.neighbors: # couldnt find so look at neighbors for g_scores, update if better
