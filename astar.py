@@ -144,7 +144,7 @@ def algorithm(draw, grid, start, end):
         
         draw()
         
-        if current != start:
+        if current != start: # make red if visited
             current.make_closed()
         
     return False
@@ -237,7 +237,7 @@ def main(win, width):
                 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE and not started:
-                    # algo goes here :)
+                    # algo :)
                     # update neighbors of spots
                     for row in grid:
                         for spot in row:
@@ -247,7 +247,10 @@ def main(win, width):
                     # x = def func():
                     #     print('hello')
                     # x()
-            
+                if event.key == pygame.K_c:
+                    start = None
+                    end = None
+                    grid = make_grid(ROWS, width)
             
     pygame.quit()
     
