@@ -14,8 +14,9 @@
 ## *Controls*:
 - 1st `left mouse click` - draw start point
 - 2nd `left mouse click` - draw end point
-- 3rd `left moust click` - draw barrier blocks
+- 3rd `left mouse click` - draw barrier blocks
 - `spacebar` - Start algorithm
+- `right mouse click` - erase
 - `X` - top left, close game
 
 
