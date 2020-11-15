@@ -2,6 +2,8 @@
     - shortest path
     - A*
 
+![](algo.gif)
+
 ## *Instructions*:
 1. `pipenv install` (mac users v2)
     - **install** dependencies: `pygame`
